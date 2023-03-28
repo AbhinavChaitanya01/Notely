@@ -11,7 +11,7 @@ router.get("/fetchallnotes",fetchuser,async (req,res)=>{
         const notes = await Note.find({user:req.user.id});
         res.json(notes);
     } catch (error) {
-        console.error(error.message);
+        
         res.status(500).send("internal server error");
     }
 })
@@ -34,7 +34,7 @@ router.post("/addnote",fetchuser,[
         const savedNote = await note.save();
         res.json(savedNote);
     }catch(error){
-        console.error(error.message);
+        
         res.status(500).send("internal server error");
     }
 })
