@@ -1,6 +1,5 @@
 const jwt = require('jsonwebtoken');
-const JWT_SECRET = "This_Has_Be_en_Gr8metHo_DtOVeriFy_ThEUsE_Rs_b&&&T";
-
+require('dotenv').config();
 const fetchuser=(req,res,next)=>{
     // Get the user from the jwt token and add id to req object.
     // A request header is an HTTP header that can be used in an HTTP request to provide information about the request context, so that the server can tailor the response.
@@ -12,7 +11,7 @@ const fetchuser=(req,res,next)=>{
     }
 
     try {
-        const data = jwt.verify(token, JWT_SECRET);
+        const data = jwt.verify(token, process.env.JWTSECRET);
         req.user = data.user;
         next();
     } catch (error) {
