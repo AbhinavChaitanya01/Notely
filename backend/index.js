@@ -14,5 +14,4 @@ app.use("/api/auth",require("./routes/auth"));
 app.use("/api/notes",require("./routes/notes"));
 
 app.listen(process.env.PORT||5000, function(){
-	console.log("server started on port 5000");
 }) 
