@@ -37,7 +37,7 @@ router.post("/createuser",[
     try{
         let user = await User.findOne({email: req.body.email});
         if(user){
-            console.log(user);
+//             
             return res.status(400).json({success, error: "account with this email already exists!"});
         }
         const salt = await bcrypt.genSaltSync(10);
@@ -56,11 +56,11 @@ router.post("/createuser",[
         success= true;
         res.json({success, authToken});
     } catch (error){
-        console.error(error.message);
+//        
         res.status(500).send("Some error occured");
     }
     // .then(user => res.json(user))
-    // .catch(err=>{console.log(err)
+    // .catch(err=>{
     // res.json({error: "account with this email already exists!"})});
 })
 
@@ -96,7 +96,7 @@ router.post("/login",[
         res.json({success,authToken});
 
     } catch (error) {
-        console.error(error.message);
+        
         res.status(500).send("internal server error");
     }
 })
@@ -110,7 +110,7 @@ router.post("/getuser",fetchuser,async (req,res)=>{
         const user = await User.findById(userId).select("-password");
         res.send(user);
     } catch (error) {
-        console.error(error.message);
+       
         res.status(500).send("internal server error");
     }
 })
