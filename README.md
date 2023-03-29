@@ -5,10 +5,10 @@
 - Includes SignUp and Login for fetching user specific notes, and uses JSON Web Token for authentication.
 
 These are a few images to demonstrate. Visit the get started section for more.....
-- ### SignUp
+- ### Login
 
 ![img1](https://user-images.githubusercontent.com/98750072/228136627-02e44e1d-7be5-46af-ba01-6bc2491895c3.jpg)
-- ### Login
+- ### SignUp
 
 ![img2](https://user-images.githubusercontent.com/98750072/228136734-71e7ca72-3023-4200-a431-44abf431b39d.jpg)
 - ### Add notes
