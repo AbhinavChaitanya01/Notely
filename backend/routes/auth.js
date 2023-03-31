@@ -12,9 +12,6 @@ var fetchuser = require("../middleware/fetchuser.js")
 // They are issued by an authentication server and are consumed by the client-server (to secure its APIs).
 // It is encoded by three parts namely { algorithms and token type, data, signature }
 
-// const JWTSECRET = "This_Has_Be_en_Gr8metHo_DtOVeriFy_ThEUsE_Rs_b&&&T";
-
-
 // ROUTE 1: CREATE a user using : POST "/api/auth/createuser" No login required
 
 router.post("/createuser",[
